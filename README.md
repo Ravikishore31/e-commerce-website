@@ -1,4 +1,4 @@
-##Adding Your First Product:  
+## Adding Your First Product:  
 
 When you first open the Product Management App, you may notice that no products are displayed. To get started, you need to add your first product:  
 
