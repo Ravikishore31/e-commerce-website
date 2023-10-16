@@ -16,7 +16,7 @@ Click on the "Add Product" button in the user interface. This will open a form w
   
 After filling in the required details, click the "Save" button. Your product will be added to the list of products, and it will now be displayed on the main page.
 
-**Managing Your Products**  
+## Managing Your Products:  
 
 Once you have added your first product, you can manage it and other products with the following actions:  
 
