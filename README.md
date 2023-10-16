@@ -2,7 +2,7 @@
 When you first open the Product Management App, you may notice that no products are displayed. To get started, you need to add your first product:
 Click on the "Add Product" button in the user interface. This will open a form where you can input the details of your product.
 
-**Fill in the required fields in the form:**
+**Fill in the required fields in the form:**\
 **Title:** Enter the title of your product.
 **Description:** Provide a description of the product.
 **Image:** Add an image URL for the product.
