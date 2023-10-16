@@ -4,7 +4,7 @@ const Header = ({ onSortClick, sortByPrice, onFormClick }) => {
   return (
     <div className="ui fixed menu">
       <div className="ui container center">
-        <h2>FakeShop</h2>
+        <h2>Optimite Store</h2>
         <div className="right menu">
           <button
             className="sort-button sorting"

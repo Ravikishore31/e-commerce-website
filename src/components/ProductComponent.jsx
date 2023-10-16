@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "./Header";
 import ProductForm from "./ProductForm";
 import { v4 as uuidv4 } from "uuid";
-import AddProduct from "./AddProduct";
 import { addProduct1 } from "../redux/actions/productsActions";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
@@ -37,7 +37,6 @@ const ProductComponent = () => {
     localStorage.setItem("products1", JSON.stringify(updatedProducts1));
     dispatch(addProduct1(newProduct));
   };
-  //console.log(products1);
 
   const deleteProduct = (productId) => {
     // Filter out the product with the matching ID from products1
@@ -47,8 +46,6 @@ const ProductComponent = () => {
 
     // Update the local state for products1
     setProducts1(updatedProducts1);
-
-    //console.log(products1);
 
     // Update the data in local storage for products1
     localStorage.setItem("products1", JSON.stringify(updatedProducts1));
@@ -65,7 +62,7 @@ const ProductComponent = () => {
       return 0;
     })
     .map((product) => {
-      const { id, title, image, price, category } = product;
+      const { id, title, image, price } = product;
 
       return (
         <div className="four wide column" key={id}>
@@ -78,14 +75,15 @@ const ProductComponent = () => {
                 <div className="content">
                   <div className="header">{title}</div>
                   <div className="meta price">$ {price}</div>
-                  {/* <div className="meta">{category}</div> */}
                 </div>
               </div>
             </div>
           </Link>
-          <button onClick={() => deleteProduct(id)} className="ui button red">
-            Delete
-          </button>
+          <>
+            <button onClick={() => deleteProduct(id)} className="delete-button">
+              <DeleteIcon />
+            </button>
+          </>
         </div>
       );
     });
@@ -110,11 +108,6 @@ const ProductComponent = () => {
       {isFormVisible && (
         <ProductForm onAddProduct={addProduct} onFormClick={onFormClick} />
       )}
-      {/* <AddProduct
-        products1={products1}
-        sortByPrice={sortByPrice}
-        deleteProduct={deleteProduct}
-      /> */}
       {renderList}
     </>
   );

@@ -180,3 +180,13 @@ input[type="file"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #333;
+  margin-top: 8px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
